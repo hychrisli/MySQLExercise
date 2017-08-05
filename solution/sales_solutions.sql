@@ -1,0 +1,1 @@
+-- 1. for each store show the difference in sales between 2014 and 2015
