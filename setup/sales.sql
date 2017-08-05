@@ -28,6 +28,8 @@ INSERT INTO Customer (custId, name, gender, birthday, stateId)
 	VALUES(4, 'Jim', 'M', STR_TO_DATE('1960/10/27', '%Y/%m/%d'), 3);
 INSERT INTO Customer (custId, name, gender, birthday, stateId)
 	VALUES(5, 'Elen', 'F', STR_TO_DATE('1984/05/03', '%Y/%m/%d'), 1);
+INSERT INTO Customer (custId, name, gender, birthday, stateId)
+	VALUES(6, 'Karen', 'F', STR_TO_DATE('1987/06/24', '%Y/%m/%d'), 2);
 
 ---------------------
 ---------------------
