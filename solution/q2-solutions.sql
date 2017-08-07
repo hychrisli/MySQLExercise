@@ -56,3 +56,22 @@ FROM Q2Orders
 WHERE cust_id = 6;
 
 
+-- e. Select sales persons with 3rd max salary in the q2salesperson table
+SELECT 
+sp1.name, 
+sp1.salary
+FROM Q2Salesperson sp1
+WHERE 3 = (SELECT COUNT(DISTINCT salary) FROM Q2Salesperson sp2 WHERE sp1.salary <= sp2.salary)
+
+SELECT name, salary
+FROM Q2Salesperson 
+ORDER BY salary DESC LIMIT 2 OFFSET 2
+
+SELECT
+name, 
+salary,
+@r := @r + 1 AS rank
+FROM q2salesperson, (SELECT @r := 0) AS var
+ORDER BY salary DESC
+
+

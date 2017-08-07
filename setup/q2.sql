@@ -16,6 +16,9 @@ VALUES
 	(11, 'Joe', 38, 38000);
 COMMIT;
 
+INSERT INTO Q2Salesperson (id, name, age, salary) 
+VALUES (12, 'Paul', 60, 52000);
+
 
 CREATE TABLE Q2Customer
 (
