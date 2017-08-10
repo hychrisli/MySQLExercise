@@ -65,10 +65,12 @@ SET @n := 5
 
 SELECT
 CONCAT('[', bucket.sz * FLOOR(salary / bucket.sz), '-', bucket.sz * ( FLOOR(salary / bucket.sz) + 1), ')') AS `bucket`,
-COUNT(salary) CNT
+COUNT(salary) cnt
 FROM 
 	q4dist,
 	(SELECT FLOOR((MAX(salary) - MIN(salary)) / @n) AS sz FROM q4dist) bucket
 
 GROUP BY FLOOR(salary / bucket.sz)
 ORDER BY FLOOR(salary / bucket.sz);
+
+-- g. Find the median
